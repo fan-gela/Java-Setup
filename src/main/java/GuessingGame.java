@@ -3,13 +3,7 @@ import java.util.Scanner;
 
 public class GuessingGame {
 
-//    public void guessingGame() {
-//
-//
-//    }
-
-    public static void main(String[] args) throws InterruptedException {
-
+    public void guessingGame() {
         System.out.println("Welcome to the Guessing Game!");
         System.out.println("What is your name?");
 
@@ -22,7 +16,6 @@ public class GuessingGame {
         System.out.println("Guess what number I am thinking of between 1 and 100?");
         input = new Scanner(System.in);
         int numberOfGuesses = 0;
-
 
         while (true) {
             try {
@@ -45,7 +38,6 @@ public class GuessingGame {
 
         }
 
-
-
     }
+
 }
