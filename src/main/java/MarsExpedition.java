@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class MarsExpedition {
@@ -23,11 +25,11 @@ public class MarsExpedition {
         }
 
 
+        int teamSize = 0;
         try {
             System.out.println("How many people do you want on your team?");
             input = new Scanner(System.in);
             int teamNumberRequest = Integer.parseInt(input.next());
-            int teamSize = 0;
 
             if (teamNumberRequest > 2) {
                 System.out.println("That’s way to many people. We can only send 2 more members.");
@@ -47,6 +49,22 @@ public class MarsExpedition {
         System.out.println(String.format("Nice choice, you will be bringing a %s with you.", snackChoice));
 
 
+        Map<String, String> carMap = new HashMap<>();
+        carMap.put("A", "Chevy");
+        carMap.put("B", "Suburu");
+        carMap.put("C", "Mazda");
+        carMap.put("D", "Ford");
+
+        System.out.println("Pick a vehicle from this list:");
+        for (String key : carMap.keySet()) {
+            System.out.println(String.format("Key: %s, Value: %d", key, carMap.get(key)));
+        }
+
+        input = new Scanner(System.in);
+        String carChoiceOption = input.next();
+        String carChoice = carMap.get(carChoiceOption);
+
+        System.out.println(playerName + ", you are ready to go with a team of " + String.valueOf(teamSize) + " members, " + snackChoice + " for a snack, and a " + carChoice + " to drive!");
 
     }
 }
